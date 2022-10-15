@@ -1,0 +1,80 @@
+:root {
+   --primary-color: #e0c521;
+}
+
+.card {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   width: 150px;
+   height: 250px;
+   border: 2px solid var(--primary-color);
+   padding: .5rem .3rem;
+   margin: 13px 10px;
+   position: relative;
+   border-radius: 5px;
+}
+
+.cardTitile {
+   font-weight: 400;
+   text-align: center;
+}
+
+.cardTitile.cardPrice {
+   font-weight: bold;
+}
+
+.imageContainer{
+   width: 100px;
+   height: 100px;
+   margin: 0 auto;
+}
+
+.imageContainer img {
+   width: 100%;
+   object-fit: cover;
+}
+
+.btnContainer {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+
+.cardPrice {
+   text-align: center;
+   display: inline-block;
+}
+
+.cardBadge {
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 40px;
+   height: 40px;
+   background-color: rgb(227, 112, 30);
+   border-radius: 50%;
+   transform: translate(20px, -20px) scale(1);
+   color: white;
+   font-weight: bold;
+   text-align: center;
+   background-origin: 2px solid rgb(227, 112, 30);
+   font-size: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: all .4s ease;
+   animation: scaleanimation 1s ease infinite;
+   opacity: .8;
+}
+
+@keyframes scaleanimation {
+   to{
+      transform: translate(20px, -20px) scale(1.03);
+      opacity: 1;
+   }
+}
+
+.cardBadgeHidden {
+   display: none;
+}
